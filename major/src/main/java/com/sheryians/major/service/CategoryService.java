@@ -8,10 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * CategoryService provides methods to manage categories.
- * It interacts with the CategoryRepository to perform CRUD operations.
- */
 @Service
 public class CategoryService {
 

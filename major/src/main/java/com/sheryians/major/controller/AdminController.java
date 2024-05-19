@@ -27,10 +27,6 @@ import com.sheryians.major.service.ProductService;
 import java.util.Optional;
 
 
-/**
- * The AdminController class handles all admin-related HTTP requests.
- * It provides endpoints for managing categories and products.
- */
 @Controller
 public class AdminController {
 
@@ -38,59 +34,33 @@ public class AdminController {
      * The upload directory for the product image.
      */
     public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
-
-
+    /**
+     * Declare Global Variable
+     */
     @Autowired
     CategoryService categoryService;
 
     @Autowired
     ProductService productService;
-
-    /**
-     * Handles the GET request for the admin home page.
-     *
-     * @return the name of the admin home view
-     */
     @GetMapping("/admin")
     public String adminHome(){
         return "adminHome";
     }
-    /**
-     * Handles the GET request for the categories page as well.
-     * It Adds the list of all categories to the model.
-     * @param model This model to which the categories are added
-     * @return This name of the categories view
-     */
     @GetMapping("/admin/categories")
     public String getCat(Model model){
         model.addAttribute("categories", categoryService.getAllCategory());
         return "categories";
     }
-    /**
-     * Handles the GET request for the add category page.
-     * Adds a new Category object to the model.
-     *
-     * @param model the model to which the new category is added
-     * @return the name of the add category view
-     */
     @GetMapping("/admin/categories/add")
     public String getCatAdd(Model model){
         model.addAttribute("category", new Category());
         return "categoriesAdd";
     }
-
-    /**
-     * Handles the POST request to add a new category.
-     *
-     * @param category the category to be added
-     * @return a redirect to the categories page
-     */
     @PostMapping("/admin/categories/add")
     public String postCatAdd(@ModelAttribute("category") Category category){
         categoryService.addCategory(category);
         return "redirect:/admin/categories";
     }
-
     /**
      * Handles the GET request to delete a category by its ID.
      *

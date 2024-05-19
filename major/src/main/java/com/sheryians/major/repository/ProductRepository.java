@@ -13,12 +13,5 @@ public interface ProductRepository extends JpaRepository <Product, Long> {
      * @return A list containing all Product objects belonging to the specified category.
      */
     List<Product> findAllByCategory_Id(int id);
-
-/**
- * ProductRepository is a repository interface for performing CRUD operations on Product entities.
- * It extends JpaRepository to provide methods for interacting with the database.
- */
-public interface ProductRepository extends JpaRepository<Product, Long> {
-
-
 }
+

@@ -34,7 +34,6 @@ public class ProductService {
 
     public List<Product> getAllProduct(){
 
-    public List<Product> getAllProduct() {
 
         return productRepository.findAll();
     }

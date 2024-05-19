@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Entity
 @Data
 public class Category {
-
     /**
      * The unique identifier of the category.
      * It is generated automatically.

@@ -55,20 +55,17 @@ public class AdminController {
     public String adminHome(){
         return "adminHome";
     }
-
     /**
-     * Handles the GET request for the categories page.
-     * Adds the list of all categories to the model.
-     *
-     * @param model the model to which the categories are added
-     * @return the name of the categories view
+     * Handles the GET request for the categories page as well.
+     * It Adds the list of all categories to the model.
+     * @param model This model to which the categories are added
+     * @return This name of the categories view
      */
     @GetMapping("/admin/categories")
     public String getCat(Model model){
         model.addAttribute("categories", categoryService.getAllCategory());
         return "categories";
     }
-
     /**
      * Handles the GET request for the add category page.
      * Adds a new Category object to the model.

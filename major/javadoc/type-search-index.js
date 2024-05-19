@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.sheryians.major","l":"MajorApplication"}];updateSearchResults();
+typeSearchIndex = [{"p":"com.sheryians.major.controller","l":"AdminController"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"}];updateSearchResults();

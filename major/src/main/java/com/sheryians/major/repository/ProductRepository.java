@@ -4,6 +4,7 @@ import com.sheryians.major.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
+
 public interface ProductRepository extends JpaRepository <Product, Long> {
     /**
      * Retrieves all products belonging to a specific category based on the category ID.
@@ -12,4 +13,12 @@ public interface ProductRepository extends JpaRepository <Product, Long> {
      * @return A list containing all Product objects belonging to the specified category.
      */
     List<Product> findAllByCategory_Id(int id);
+
+/**
+ * ProductRepository is a repository interface for performing CRUD operations on Product entities.
+ * It extends JpaRepository to provide methods for interacting with the database.
+ */
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+
 }

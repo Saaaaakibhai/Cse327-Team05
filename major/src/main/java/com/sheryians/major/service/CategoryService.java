@@ -12,13 +12,29 @@ import java.util.Optional;
 public class CategoryService {
     @Autowired
     CategoryRepository categoryRepository;
+
+    /**
+     * Retrieves all categories from the repository.
+     * @return a list of all categories
+     */
     public List<Category> getAllCategory() {
         return categoryRepository.findAll();
     }
+
+    /**
+     * Adds a new category to the repository.
+     * @param category category the category to be added
+     */
     public void addCategory(Category category) {
         categoryRepository.save(category);
     }
-    
+    /**
+     * Removes a category from the repository by its ID.
+     * @param id the ID of the category to be removed
+     */
+    public void removeCategoryById(int id) {
+        categoryRepository.deleteById(id);
+    }
     /**
      * Retrieves a category by its ID.
      *

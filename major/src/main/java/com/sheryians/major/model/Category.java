@@ -10,17 +10,27 @@ import javax.persistence.*;
 @Entity
 @Data
 public class Category {
-
+    private int id;
+    private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id")
-    /**
-     * The unique identifier of the category.
-     * It is generated automatically.
-     */
-    private int id;
-    /**
-     * The name of the category.
-     */
-    private String name;
+
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

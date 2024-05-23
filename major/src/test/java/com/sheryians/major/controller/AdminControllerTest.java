@@ -58,5 +58,8 @@ class AdminControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("484"));
     }
+
+
+
 }
 

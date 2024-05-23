@@ -16,8 +16,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id")
 
-    
-
     public int getId() {
         return id;
     }

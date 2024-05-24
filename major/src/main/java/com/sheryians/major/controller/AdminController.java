@@ -32,8 +32,8 @@ import java.util.Optional;
  */
 @Controller
 public class AdminController {
-
     /**
+     * Author S. M. Mahedi Hasan
      * The upload directory for the product image.
      */
     public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";

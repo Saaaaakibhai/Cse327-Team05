@@ -22,6 +22,7 @@ public class UserTest {
         validator = factory.getValidator();
     }
 
+
     @Test
     public void testUserCreation() {
         User user = new User();
@@ -34,7 +35,6 @@ public class UserTest {
         assertEquals("john.doe@example.com", user.getEmail());
 
     }
-
     @Test
     public void testInvalidEmail() {
         User user = new User();

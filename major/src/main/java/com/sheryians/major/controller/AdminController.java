@@ -11,6 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class AdminController {
+<<<<<<< Updated upstream
+=======
+
+    /**
+     * The upload directory for the product image.
+     */
+    public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
+    /**
+     * Author S. M. Mahedi Hasan Category
+     * Declare Global Variable
+     */
+>>>>>>> Stashed changes
     @Autowired
     CategoryService categoryService;
     @GetMapping("/admin")

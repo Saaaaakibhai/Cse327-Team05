@@ -1,5 +1,7 @@
 package com.sheryians.major.controller;
 
+import org.springframework.validation.BindingResult;
+import org.springframework.web.servlet.ModelAndView;
 import com.sheryians.major.model.Category;
 import com.sheryians.major.service.CategoryService;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,7 +13,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Optional;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -27,12 +30,27 @@ class AdminControllerTest {
     @Mock
     private CategoryService categoryService;
 
+
     private MockMvc mockMvc;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(adminController).build();
+    }
+    /*
+       S. M. Mahedi Hasan Category Added
+    */
+    @Test
+    void testPostCatAdd() {
+        Category category = new Category();
+        category.setId(1);
+        category.setName("Add Category");
+
+        String viewName = adminController.postCatAdd(category);
+
+        assertEquals("redirect:/admin/categories", viewName);
+        verify(categoryService, times(1)).addCategory(category);
     }
 
     @Test

@@ -22,8 +22,6 @@ import com.sheryians.major.model.Category;
 import com.sheryians.major.model.Product;
 import com.sheryians.major.service.CategoryService;
 import com.sheryians.major.service.ProductService;
-
-
 import java.util.Optional;
 
 /**

@@ -26,7 +26,6 @@ import com.sheryians.major.service.ProductService;
 
 import java.util.Optional;
 
-
 /**
  * The AdminController class handles all admin-related HTTP requests.
  * It provides endpoints for managing categories and products.
@@ -38,30 +37,29 @@ public class AdminController {
      * The upload directory for the product image.
      */
     public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
-
-
+    /**
+     * Author S. M. Mahedi Hasan
+     * Declare Global Variable
+     */
     @Autowired
     CategoryService categoryService;
-
-    @Autowired
-    ProductService productService;
-
     /**
      * Handles the GET request for the admin home page.
-     *
+     * Author: Md. Arifuzzaman Arif
      * @return the name of the admin home view
      */
+    @Autowired
+    ProductService productService;
     @GetMapping("/admin")
     public String adminHome(){
         return "adminHome";
     }
 
     /**
-     * Handles the GET request for the categories page.
-     * Adds the list of all categories to the model.
-     *
-     * @param model the model to which the categories are added
-     * @return the name of the categories view
+     * It Adds the list of all categories to the model.
+     * Handles the GET request for the categories page as well.
+     * @param model This model to which the categories are added
+     * @return This name of the categories view
      */
     @GetMapping("/admin/categories")
     public String getCat(Model model){
@@ -72,7 +70,6 @@ public class AdminController {
     /**
      * Handles the GET request for the add category page.
      * Adds a new Category object to the model.
-     *
      * @param model the model to which the new category is added
      * @return the name of the add category view
      */
@@ -84,7 +81,6 @@ public class AdminController {
 
     /**
      * Handles the POST request to add a new category.
-     *
      * @param category the category to be added
      * @return a redirect to the categories page
      */
@@ -93,7 +89,6 @@ public class AdminController {
         categoryService.addCategory(category);
         return "redirect:/admin/categories";
     }
-
     /**
      * Handles the GET request to delete a category by its ID.
      *

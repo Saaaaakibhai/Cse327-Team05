@@ -391,3 +391,19 @@ alter table user_role add constraint FK859n2jvi8ivhui0rl0esws6o foreign key (use
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-06-30 01:02:34 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROLE" not found; SQL statement:
+SELECT * FROM ROLE [42102-200]
+2024-06-30 01:02:40 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROLE" not found; SQL statement:
+SELECT * FROM role [42102-200]
+2024-06-30 01:02:43 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROLE" not found; SQL statement:
+SELECT * FROM Role [42102-200]
+2024-06-30 01:13:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users [42102-200]
+2024-06-30 01:15:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+INSERT INTO users(id,email,password,first_Name,last_Name) VALUES
+(1,'admin@gmail.com','adminpanel','Admin','gupta') [42102-200]

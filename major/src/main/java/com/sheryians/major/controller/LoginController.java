@@ -10,11 +10,11 @@ public class LoginController {
      */
     @GetMapping("/login")
     public String login() {
-        return "loginPage"; // Change the returned view name to avoid circular path
+        return "login"; // Change the returned view name to avoid circular path
     }
 
     @GetMapping("/register")
     public String registerGet() {
-        return "registerPage"; // Change the returned view name to avoid circular path
+        return "register"; // Change the returned view name to avoid circular path
     }
 }
